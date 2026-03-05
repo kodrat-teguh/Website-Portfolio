@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ================ Globals ================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -884,4 +885,892 @@ body.dark-theme {
     .sertifikat-image {
         height: 220px;
     }
+=======
+/* ================ Globals ================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    /* Colors */
+    --blue-color: #42a5f5;
+    --blue-dark: #1a79c7;
+    --txt-dark: #22272b;
+    --txt-gray: #657481;
+    --txt-light: #e9ebec;
+    --txt-white: #fff;
+    --shadow-color: rgba(0, 0, 255, .2);
+    --gradient-color: linear-gradient(180deg,
+        rgba(0, 0, 255, .02) 0%,
+        rgba(0, 0, 255, .1) 95%
+    )
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3 {
+    color: var(--txt-dark);
+}
+
+p,span {
+    color: var(--txt-gray);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================ Reusable Classes ================ */
+.container {
+    max-width: 968px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* ================ Profile ================  */
+.profile {
+    position: relative;
+    padding-top: 3.5rem;
+    row-gap: 2rem;
+}
+
+.profile-data {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-data .imgBx {
+    width: 155px;
+    height: 155px; /* samakan dengan width */
+    border-radius: 50%;
+    border: 3.5px solid var(--blue-color);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: .75rem;
+}
+
+.profile-data .imgBx img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* supaya gambar penuh dan tidak gepeng */
+    object-position: center top;
+}
+
+.profile-data .profession {
+    font-size: small;
+    font-weight: 500;
+    color: var(--txt-gray);
+    margin-bottom: 1rem;
+}
+
+.profile-data .socials {
+    display: flex;
+    justify-content: center;
+    column-gap: .75rem;
+}
+
+.profile-data .socials .link {
+    font-size: 1.25rem;
+    color: var(--txt-dark);
+    transition: .3s;
+}
+
+.profile-data .socials .link:hover {
+    color: var(--blue-color);
+}
+
+.profile-info {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    column-gap: 2.5rem;
+}
+
+.profile-info .group {
+    text-align: center;
+}
+
+.profile-info .group .number {
+    margin-bottom: .25rem;
+}
+
+.profile-info .group .desc {
+    font-size: small;
+    font-weight: 500;
+}
+
+.profile-btns,
+.profile-btns .small-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-btns {
+    column-gap: 1rem;
+}
+
+.profile-btns .small-btns {
+    column-gap: .25rem;
+}
+
+/* ================ Buttons ================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background: var(--blue-color);
+    color: var(--txt-white);
+    padding: 1.15rem 1.5rem;
+    border-radius: .5rem;
+    transition: .3s;
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.btn:hover {
+    background: var(--blue-dark);
+}
+
+.btn i {
+    font-size: 1.25rem;
+}
+
+.btn-small {
+    padding: .75rem;
+    box-shadow: none;
+}
+
+.btn-gray {
+    background: var(--txt-light);
+    color: var(--txt-dark);
+}
+
+.btn-gray:hover {
+    background: var(--txt-gray);
+    color: var(--txt-white);
+}
+
+/* ================ Filter ================ */
+.filter-tabs {
+    margin: 2rem 0 2.5rem;
+    background: var(--txt-light);
+    padding: .375rem;
+    border-radius: .75rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: .5rem;
+}
+
+.filter-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: var(--txt-dark);
+    font-size: small;
+    font-weight: 500;
+    border-radius: .75rem;
+    cursor: pointer;
+    background: transparent;
+    transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--txt-white);
+}
+
+/* ================ Projects ================ */
+.projects-card {
+    width: 100%;
+    height: 100%;
+    /* PERBAIKAN: Tambahkan position relative & overflow hidden */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.projects-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* PERBAIKAN: Tambahkan tanda % */
+    bottom: -100%;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem 1.25rem;
+    background: var(--gradient-color);
+    transition: .3s;
+}
+
+.projects-card:hover .projects-modal {
+    bottom: 0;
+}
+
+.projects-modal .subtitle,
+.projects-modal .title {
+    color: var(--txt-white);
+}
+
+.projects-modal .subtitle {
+    font-size: small;
+}
+
+.projects-modal .title {
+    font-size: small;
+    margin-bottom: .75rem;
+}
+
+.projects-btn {
+    padding: .5rem;
+    color: white;
+}
+
+/* ================ Skills ================ */
+.skills {
+    row-gap: 3.5rem;
+}
+
+.skills-group {
+    display: grid;
+    justify-content: center;
+}
+
+.skills-group .title {
+    font-size: normal;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.skills-box {
+    display: grid;
+    /* Membuat grid 3 kolom agar ikon tidak memanjang ke bawah */
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    justify-items: center;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Kotak background untuk ikon */
+    width: 60px;
+    height: 60px;
+    background-color: var(--txt-light);
+    border-radius: 50%; /* Bentuk lingkaran */
+    transition: .3s;
+}
+
+.skill i {
+    font-size: 2rem; /* Perbesar ukuran ikon */
+    color: var(--blue-color);
+}
+
+/* Efek saat kursor diarahkan ke ikon */
+.skill:hover {
+    background-color: var(--blue-color);
+    transform: translateY(-5px); /* Efek melayang */
+}
+
+.skill:hover i {
+    color: var(--txt-white);
+}
+
+/* Hapus styling lama yang tidak needed lagi */
+/* Kita sort dari teks dan level karena sekarang fokus ke ikon */
+.skill .text {
+    display: none;
+}
+
+
+/* ================ Sertifikat ================ */
+.sertifikat-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+    cursor: pointer;
+    background: var(--txt-light);
+}
+
+.sertifikat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sertifikat-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s;
+}
+
+.sertifikat-card:hover .sertifikat-image {
+    transform: scale(1.05);
+}
+
+.sertifikat-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.sertifikat-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--txt-dark);
+    margin-bottom: .5rem;
+}
+
+.sertifikat-date {
+    font-size: small;
+    color: var(--txt-gray);
+    margin-bottom: .5rem;
+}
+
+.sertifikat-hint {
+    font-size: small;
+    color: var(--blue-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+}
+
+.sertifikat-hint i {
+    font-size: 1rem;
+}
+
+/* ================ Certificate Modal ================ */
+.certificate-modal {
+    display: none !important;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.certificate-modal.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-modal-content {
+    background-color: var(--txt-white);
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--txt-dark);
+    cursor: pointer;
+    transition: .3s;
+    z-index: 10001;
+}
+
+.certificate-close:hover {
+    color: var(--blue-color);
+    transform: scale(1.1);
+}
+
+#certificate-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ================ Filter Fix ================ */
+#projects, #skills, #sertifikat {
+    display: none !important;
+}
+
+#projects.active, #skills.active, #sertifikat.active {
+    display: grid !important;
+}
+
+#projects {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+#skills {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+#sertifikat {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+/* ================ Show & Hide Filter Content ================ */
+.filter [data-content] {
+    display: none;
+}
+
+.filter .active[data-content] {
+    display: grid;
+}
+
+/* ================ Footer ================ */
+.footer-copy {
+    display: block;
+    margin: 2.5rem 0 2rem;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* ================ Scrollbar ================ */
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background: var(--txt-light);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background: var(--txt-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--txt-dark);
+}
+
+/* ================ Theme ================ */
+#theme-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    font-size: 1.25rem;
+    color: var(--txt-dark);
+    cursor: pointer;
+    transition: .3s;
+}
+
+#theme-btn:hover {
+    color: var(--blue-color);
+}
+
+body.dark-theme {
+    --blue-color: #42a5f5;
+    --blue-dark: #1a79c7;
+    --txt-dark: #fff;
+    --txt-gray: #e9ebec;
+    --txt-light: #657481;
+    --txt-white: #22272b;
+
+    background: var(--txt-white);
+}
+
+/* ================ Responsive ================ */
+
+/* For Small Devices (Mobile) */
+@media screen and (max-width: 480px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .profile-info {
+        column-gap: 1rem;
+    }
+    
+    .profile-btns {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    
+    .filter-tabs {
+        width: 100%;
+        margin: 2rem 0 1.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-box {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+    }
+    
+    .skill {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .skill i {
+        font-size: 1.5rem;
+    }
+    
+    .sertifikat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .sertifikat-image {
+        height: 150px;
+    }
+    
+    .sertifikat-info {
+        padding: 1rem;
+    }
+    
+    .sertifikat-title {
+        font-size: 0.9rem;
+    }
+    
+    .sertifikat-date {
+        font-size: 0.75rem;
+    }
+    
+    .sertifikat-hint {
+        font-size: 0.75rem;
+    }
+}
+
+/* For Medium Devices (Tablet) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    
+    .profile-info {
+        column-gap: 1.5rem;
+    }
+    
+    .profile-btns {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    
+    .filter-tabs {
+        width: 100%;
+        margin: 2.5rem 0 2rem;
+    }
+    
+    .filter-btn {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+    
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .skills-box {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.25rem;
+        row-gap: 1.25rem;
+    }
+    
+    .skill {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .skill i {
+        font-size: 1.75rem;
+    }
+    
+    .sertifikat-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .sertifikat-image {
+        height: 175px;
+    }
+    
+    .sertifikat-info {
+        padding: 1.25rem;
+    }
+    
+    .sertifikat-title {
+        font-size: 1rem;
+    }
+    
+    .sertifikat-date {
+        font-size: 0.85rem;
+    }
+}
+
+/* For Large Devices (Desktop) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .profile-info {
+        column-gap: 2rem;
+    }
+    
+    .profile-btns {
+        flex-direction: row;
+        column-gap: 1.5rem;
+    }
+    
+    .filter-tabs {
+        width: 100%;
+        max-width: 500px;
+        margin: 3rem auto 2.5rem;
+    }
+    
+    .filter-btn {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .skills-box {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }
+    
+    .skill {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill i {
+        font-size: 2rem;
+    }
+    
+    .sertifikat-card {
+        margin-bottom: 2rem;
+    }
+    
+    .sertifikat-image {
+        height: 200px;
+    }
+    
+    .sertifikat-info {
+        padding: 1.5rem;
+    }
+    
+    .sertifikat-title {
+        font-size: 1rem;
+    }
+    
+    .sertifikat-date {
+        font-size: 0.9rem;
+    }
+}
+
+/* For Extra Large Devices (Large Desktop) */
+@media screen and (min-width: 993px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+    }
+    
+    #theme-btn {
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+    
+    .profile {
+        padding-top: 4rem;
+    }
+    
+    .profile-data .imgBx {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-data .imgBx img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-data .profession {
+        margin-bottom: 1.5rem;
+    }
+    
+    .profile-info {
+        column-gap: 3rem;
+    }
+    
+    .profile-btns {
+        column-gap: 2rem;
+    }
+    
+    .filter-tabs {
+        width: 100%;
+        max-width: 600px;
+        margin: 3rem auto 2.5rem;
+    }
+    
+    .filter-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 3rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .skills-box {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    
+    .skill {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .skill i {
+        font-size: 2.25rem;
+    }
+    
+    .sertifikat-card {
+        margin-bottom: 2.5rem;
+    }
+    
+    .sertifikat-image {
+        height: 200px;
+    }
+    
+    .sertifikat-info {
+        padding: 1.5rem;
+    }
+    
+    .sertifikat-title {
+        font-size: 1.1rem;
+    }
+    
+    .sertifikat-date {
+        font-size: 0.95rem;
+    }
+    
+    .footer-copy {
+        margin: 4.5rem 0 2.5rem;
+    }
+}
+
+/* For Very Large Devices (Extra Large Desktop) */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem 3.5rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    
+    .skills-box {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
+    }
+    
+    .skill {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .skill i {
+        font-size: 2.5rem;
+    }
+    
+    .sertifikat-card {
+        margin-bottom: 3rem;
+    }
+    
+    .sertifikat-image {
+        height: 220px;
+    }
+>>>>>>> c4b3a458d39f91aa34ca65aba7de9d63475d0011
 }
