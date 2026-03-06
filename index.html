@@ -26,7 +26,7 @@
 
                 <h2 class="name">Teguh Budianto</h2>
 
-                <h3 class="profession">Web Developer</h3>
+                <h3 class="profession">"Web Developers who focus on creating information system <br> website and web-based applications."</h3>
 
                 <div class="socials">
                     <a href="https://www.instagram.com/teguhbudianto_18?igsh=N2JiOWhmbGx6dmhz" target="_blank" class="link">
@@ -45,18 +45,18 @@
 
             <div class="profile-info grid">
                 <div class="group">
-                    <h3 class="number">1</h3>
-                    <p class="desc">Years of <br> work</p>
+                    <h3 class="number"></h3>
+                    <p class="desc">Fresh<br> Graduate</p>
                 </div>
 
                 <div class="group">
-                    <h3 class="number">+2</h3>
+                    <h3 class="number">+3</h3>
                     <p class="desc">Completed <br> projects</p>
                 </div>
 
                 <div class="group">
-                    <h3 class="number">0</h3>
-                    <p class="desc">Satisfied <br> customer</p>
+                    <h3 class="number"></h3>
+                    <p class="desc">Ready<br>for Work</p>
                 </div>
             </div>
 
@@ -90,6 +90,11 @@
 
                 <button class="filter-btn" data-target="#skills">
                     Skills
+                </button>
+
+                <!-- TAMBAHAN: Tombol About Me -->
+                <button class="filter-btn" data-target="#aboutme">
+                    About Me
                 </button>
 
                 <button class="filter-btn" data-target="#sertifikat">
@@ -193,286 +198,34 @@
                     </div>
                 </div>
 
-                <!-- ================ Sertifikat Section ================ -->
-                <div id="sertifikat" class="projects grid" data-content>
-                    <!-- Sertifikat 1 -->
-                    <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat1.jpg')">
-                        <img src="assets/images/sertifikat1.jpg" alt="Sertifikat 1" class="sertifikat-image">
-                        <div class="sertifikat-info">
-                            <h3 class="sertifikat-title">Junior Web Developer</h3>
-                            <p class="sertifikat-date">Issued: 2023</p>
-                            <p class="sertifikat-hint"><i class="ri-eye-line"></i> Klik untuk melihat</p>
-                        </div>
-                    </div>
-
-                    <!-- Sertifikat 2 -->
-                    <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat2.jpg')">
-                        <img src="assets/images/sertifikat2.jpg" alt="Sertifikat 2" class="sertifikat-image">
-                        <div class="sertifikat-info">
-                            <h3 class="sertifikat-title">Cloud Practitioner Essential (Belajar Dasa AWS Cloud)</h3>
-                            <p class="sertifikat-date">Issued: 2023</p>
-                            <p class="sertifikat-hint"><i class="ri-eye-line"></i> Klik untuk melihat</p>
-                        </div>
-                    </div>
-
-                    <!-- Sertifikat 3 -->
-                    <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat3.jpg')">
-                        <img src="assets/images/sertifikat3.jpg" alt="Sertifikat 3" class="sertifikat-image">
-                        <div class="sertifikat-info">
-                            <h3 class="sertifikat-title">Belajar Dasar Pemrograman JavaScript</h3>
-                            <p class="sertifikat-date">Issued: 2023</p>
-                            <p class="sertifikat-hint"><i class="ri-eye-line"></i> Klik untuk melihat</p>
-                        </div>
-                    </div>
-
-                    <!-- Sertifikat 4 -->
-                    <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat4.jpg')">
-                        <img src="assets/images/sertifikat4.jpg" alt="Sertifikat 4" class="sertifikat-image">
-                        <div class="sertifikat-info">
-                            <h3 class="sertifikat-title">Belajar Dasar Manajemen Proyek</h3>
-                            <p class="sertifikat-date">Issued: 2025</p>
-                            <p class="sertifikat-hint"><i class="ri-eye-line"></i> Klik untuk melihat</p>
-                        </div>
-                    </div>
-
-                    <!-- Sertifikat 5 -->
-                    <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat5.jpg')">
-                        <img src="assets/images/sertifikat5.jpg" alt="Sertifikat 5" class="sertifikat-image">
-                        <div class="sertifikat-info">
-                            <h3 class="sertifikat-title">Getting Started with Cisco Packet tracer</h3>
-                            <p class="sertifikat-date">Issued: Dec 2025</p>
-                            <p class="sertifikat-hint"><i class="ri-eye-line"></i> Klik untuk melihat</p>
-                        </div>
-                    </div>
-
-                    <!-- Sertifikat 5 -->
-                    <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat6.jpg')">
-                        <img src="assets/images/sertifikat6.jpg" alt="Sertifikat 6" class="sertifikat-image">
-                        <div class="sertifikat-info">
-                            <h3 class="sertifikat-title">Networking Basics</h3>
-                            <p class="sertifikat-date">Issued: Jan 2026</p>
-                            <p class="sertifikat-hint"><i class="ri-eye-line"></i> Klik untuk melihat</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- ================ Footer ================ -->
-    <footer>
-        <div class="container">
-            <span class="footer-copy">
-                &#169; Teguh Budianto. All rights reserved
-            </span>
-        </div>
-    </footer>
-
-    <!-- ================ Certificate Modal ================ -->
-    <div id="certificate-modal" class="certificate-modal">
-        <div class="certificate-modal-content">
-            <span class="certificate-close" onclick="closeCertificate()">&times;</span>
-            <img id="certificate-image" src="" alt="Certificate Full View">
-        </div>
-    </div>
-
-    <!-- ================ Scripts ================ -->
-    <!-- AOS Animation CDN -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Main JS -->
-    <script src="assets/main.js"></script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Teguh Budianto</title>
-    <!-- ================ CSS ================ -->
-    <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Main Style -->
-    <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-    <!-- ================ Header Profil ================ -->
-    <header>
-        <div class="container profile grid">
-            <!-- Theme Button -->
-            <i id="theme-btn" class="ri-moon-line"></i>
-
-            <div class="profile-data">
-                <div class="imgBx">
-                    <img src="assets/images/foto-removebg.png" alt="">
-                </div>
-
-                <h2 class="name">Teguh Budianto</h2>
-
-                <h3 class="profession">Web Developer</h3>
-
-                <div class="socials">
-                    <a href="https://www.instagram.com/teguhbudianto_18?igsh=N2JiOWhmbGx6dmhz" target="_blank" class="link">
-                        <i class="ri-instagram-line"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/teguh-budianto-4a314b307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="link">
-                        <i class="ri-linkedin-box-line"></i>
-                    </a>
-
-                    <a href="https://github.com/kodrat-teguh" target="_blank" class="link">
-                        <i class="ri-github-line"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="profile-info grid">
-                <div class="group">
-                    <h3 class="number">1</h3>
-                    <p class="desc">Years of <br> work</p>
-                </div>
-
-                <div class="group">
-                    <h3 class="number">+2</h3>
-                    <p class="desc">Completed <br> projects</p>
-                </div>
-
-                <div class="group">
-                    <h3 class="number">0</h3>
-                    <p class="desc">Satisfied <br> customer</p>
-                </div>
-            </div>
-
-            <div class="profile-btns">
-                <a href="assets/Cv-Teguh Budianto.pdf" class="btn" download="">
-                    Download CV <i class="ri-download-line"></i>
-                </a>
-
-                <div class="small-btns">
-                    <a href="https://api.whatsapp.com/send?phone=081223569467&text=Hello, more information!" target="_blank" class="btn btn-small btn-gray">
-                        <i class="ri-whatsapp-line"></i>
-                    </a>
-
-                    <!-- PERBAIKAN: Ganti Messenger dengan Email -->
-                    <a href="mailto:teguhbudianto180301@gmail.com" target="_blank" class="btn btn-small btn-gray">
-                        <i class="ri-mail-send-line"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- ================ Main ================ -->
-    <main>
-        <div class="filter container">
-            <!-- ================  Filter Tabs ================  -->
-            <div class="filter-tabs">
-                <button class="filter-btn active" data-target="#projects">
-                    Projects
-                </button>
-
-                <button class="filter-btn" data-target="#skills">
-                    Skills
-                </button>
-
-                <button class="filter-btn" data-target="#sertifikat">
-                    Sertifikat
-                </button>
-            </div>
-
-            <!-- ================  Filter Sections ================  -->
-            <div class="filter-sections">
-                <!-- ================ Projects Section ================ -->
-                <div id="projects" class="projects grid active" data-content>
-                    <div class="projects-card">
-                        <img src="assets/images/projects1.png" alt="">
-                        <div class="projects-modal">
-                            <div>
-                                <span class="subtitle">Website Cuti Pegawai</span>
-                                <h3 class="title">WCP</h3>
-                                <a href="" class="projects-btn btn btn-small">
-                                    <i class="ri-link"></i>
-                                </a>
+                <!-- ================ About Me Section ================ -->
+                <div id="aboutme" class="projects grid" data-content>
+                    <div class="aboutme-card">
+                        <div class="aboutme-content">
+                            <div class="aboutme-header">
+                                <div class="divider"></div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="projects-card">
-                        <img src="assets/images/project2.png" alt="">
-                        <div class="projects-modal">
-                            <div>
-                                <span class="subtitle">Website Arsip Data Siswa</span>
-                                <h3 class="title">WADS</h3>
-                                <a href="" class="projects-btn btn btn-small">
-                                    <i class="ri-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="projects-card">
-                        <img src="assets/images/project3.png" alt="">
-                        <div class="projects-modal">
-                            <div>
-                                <span class="subtitle">Website Kosan Kodrat</span>
-                                <h3 class="title">WKK</h3>
-                                <a href="https://kodrat-teguh.github.io/kodrat-kost/" class="projects-btn btn btn-small">
-                                    <i class="ri-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================ Skills Section ================ -->
-                <div id="skills" class="projects grid skills" data-content>
-                    <div class="skills-group">
-                        <h3 class="title">Frontend Developer</h3>
-                        <div class="skills-box">
-                            <div class="skill">
-                                <i class="ri-html5-line" style="color: #e34c26;" title="HTML5"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-css3-line" style="color: #264de4;" title="CSS3"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-javascript-line" style="color: #f0db4f;" title="JavaScript"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-bootstrap-line" style="color: #563d7c;" title="Bootstrap"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-reactjs-line" style="color: #61dbfb;" title="React JS"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills-group">
-                        <h3 class="title">Backend Developer</h3>
-                        <div class="skills-box">
-                            <div class="skill">
-                                <i class="ri-php-line" style="color: #474a8a;" title="PHP"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-database-2-line" style="color: #00758f;" title="MySQL"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-github-line" style="color: #333;" title="Git"></i>
-                            </div>
-                        </div>
-                        <br>
-                        <h3 class="title">Additional Skills</h3>
-                        <div class="skills-box">
-                            <div class="skill">
-                                <i class="ri-file-word-fill" style="color: #0B3C8C;" title="Microsoft Word"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-file-excel-line"" style="color: #217346;" title="Microsoft Excel"></i>
-                            </div>
-                            <div class="skill">
-                                <i class="ri-file-ppt-line" style="color: #D24726;" title="Microsoft PPT"></i>
+                            
+                            <p class="desc">
+                                Halo! Saya <strong>Teguh Budianto</strong>, seorang Fresh Graduate Teknik Informatika yang memiliki minat dalam pengembangan website dan sistem informasi berbasis web.
+                            </p>
+                            <p class="desc">
+                                Saya memiliki pengetahuan dasar dalam HTML, CSS, JavaScript, dan pengembangan website. Saya senang mempelajari teknologi baru serta mengembangkan proyek web untuk meningkatkan keterampilan dan menciptakan solusi digital yang bermanfaat.
+                            </p>
+                            
+                            <div class="aboutme-details">
+                                <div class="detail-item">
+                                    <i class="ri-mail-line"></i>
+                                    <span>teguhbudianto180301@gmail.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>Indonesia</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="ri-briefcase-line"></i>
+                                    <span>Freelance / Open to Work</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -530,7 +283,7 @@
                         </div>
                     </div>
 
-                    <!-- Sertifikat 5 -->
+                    <!-- Sertifikat 6 -->
                     <div class="sertifikat-card" onclick="openCertificate('assets/images/sertifikat6.jpg')">
                         <img src="assets/images/sertifikat6.jpg" alt="Sertifikat 6" class="sertifikat-image">
                         <div class="sertifikat-info">
@@ -567,5 +320,4 @@
     <!-- Main JS -->
     <script src="assets/main.js"></script>
 </body>
->>>>>>> c4b3a458d39f91aa34ca65aba7de9d63475d0011
 </html>
